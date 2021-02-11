@@ -1,0 +1,720 @@
+@font-face
+  font-family: 'PT Sans'
+  src: url('../assets/fonts/PTSans-Bold.woff2') format('woff2'),
+  url('../assets/fonts/PTSans-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+
+@font-face
+  font-family: 'PT Sans'
+  src: url('../assets/fonts/PTSans-Regular.woff2') format('woff2'),
+  url('../assets/fonts/PTSans-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+*
+  padding: 0
+  margin: 0
+
+html
+  font-size: 1px
+
+body
+  font-family: 'PT Sans'
+
+a
+  text-decoration: none
+  color: #FFFFFF
+
+li
+  list-style: none
+
+input:focus
+  outline: none
+
+.header
+  background: #265C9A
+
+.wrapper
+  width: 1129rem
+  margin: 0 auto
+  @media (max-width: 1024px)
+    width: auto
+
+.header-title
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 21rem 0 16rem
+
+.header-title__left--col
+  display: flex
+  align-items: center
+  @media (max-width: 1024px)
+    flex: 1 0 auto
+    form
+      display: flex
+      flex: 1 0 auto
+    label
+      display: flex
+      flex: 1 0 auto
+    input
+      display: flex
+      flex: 1 0 auto
+
+.hamburger
+  position: relative
+  width: 25rem
+  height: 20rem
+  display: none
+  @media (max-width: 1024px)
+    display: block
+    margin: 0 41rem 0 20rem
+  &.activeHamburger
+      transform: rotate(90deg)
+      transition: all 0.3s
+
+.hamburger_line
+  position: absolute
+  display: inline-block
+  width: 25rem
+  height: 1.8rem
+  background: white
+  border-radius: 5rem
+  top: calc(50% - 1.2px)
+
+.hamburger::before
+  content: ''
+  position: absolute
+  display: inline-block
+  width: 25rem
+  height: 1.8rem
+  top: 0
+  background: white
+  border-radius: 5rem
+
+.hamburger::after
+  content: ''
+  position: absolute
+  display: inline-block
+  width: 25rem
+  height: 1.8rem
+  bottom: 0
+  background: white
+  border-radius: 5rem
+
+.header-logo
+  @media (max-width: 1024px)
+    padding-right: 41rem
+
+.header-title_right--col
+  position: relative
+
+.header-logo__item h1
+  font-weight: bold
+  font-size: 28rem
+  line-height: 36rem
+  text-transform: uppercase
+
+.header-phone
+  padding: 0 87rem
+  @media (max-width: 1024px)
+    padding: 0
+    display: none
+
+.header-phone__item
+  font-size: 19rem
+  line-height: 25rem
+
+.search
+  padding-left: 21rem
+  font-size: 16rem
+  line-height: 21rem
+  width: 281rem
+  color: #FFFFFF
+  background-color: #265C9A
+  background: url(../assets/images/search.svg) no-repeat
+  background-position: left 35%
+  border: none
+  border-bottom: 1rem solid #517DAE
+  font-family: 'PT Sans'
+  @media (max-width: 540px)
+    background: #1F497B
+    padding: 11rem 0 12rem 21rem
+
+.search::placeholder
+  color: #FFFFFF
+
+.search:focus
+  outline: none
+
+.header-search__img
+  @media (max-width: 540px)
+    position: absolute
+    top: 4rem
+    right: 56rem
+
+.form-header
+  @media (max-width: 540px)
+    position: absolute
+    width: 100%
+    top: 72px
+    left: -100%
+    transition: 1s
+
+.form-header-active
+  @media (max-width: 540px)
+    left: 0
+
+.header-payment__item
+  font-size: 16rem
+  line-height: 21rem
+  text-decoration: underline
+  text-decoration-skip-ink: none
+  &:hover
+    color: #FBFF3D
+  @media (max-width: 1024px)
+    display: none
+
+.header--basket
+  display: none
+  @media (max-width: 1024px)
+    display: block
+    padding: 0 20rem 0 41rem
+  @media (max-width: 540px)
+    padding: 0 13rem 0 32rem
+
+.menu
+  background: #1F497B
+  @media (max-width: 1024px)
+    position: absolute
+    width: 100%
+    z-index: 15
+    top: -100%
+    background: #265C9A
+    transition: 1s
+  &.activeHamburger
+      top: 72rem
+
+.menu__nav
+  @media (max-width: 1024px)
+    width: 100%
+
+.menu-content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  @media (max-width: 1024px)
+    align-items: normal
+
+.nav-list
+  display: flex
+  padding: 13rem 0 12rem 0
+  @media (max-width: 1024px)
+    flex-direction: column
+    padding-bottom: 14rem
+
+.nav-list__item
+  font-size: 16rem
+  line-height: 21rem
+  font-weight: bold
+  @media (max-width: 1024px)
+    margin: 11rem 20rem 0
+    padding: 9rem 0 10rem 16rem
+    &:hover
+      background: #618CBF
+      border-radius: 1px
+
+.nav-list__item a
+  &:hover
+    color: #FBFF3D
+    @media (max-width: 1024px)
+      color: #FFFFFF
+
+.nav-list__item:not(:first-child)
+  margin-left: 40rem
+  @media (max-width: 1024px)
+    margin: 11rem 20rem 0
+    padding: 9rem 0 10rem 16rem
+
+.basket
+  padding-top: 2rem
+  @media (max-width: 1024px)
+    display: none
+
+.basket__item--svg
+  fill: #FFFFFF
+  margin: 2rem 9rem 0 0
+
+.header-search--img
+ display: none
+ @media (max-width: 540px)
+    display: block
+    fill: white
+    &:hover
+      fill: #FBFF3D
+
+.basket__item
+  display: flex
+  font-size: 16rem
+  line-height: 21rem
+  color: #FFFFFF
+  &:hover
+    color: #FBFF3D
+    &.basket__item--svg
+      fill: #FBFF3D
+
+.basket__item:hover .basket__item--svg
+  fill: #FBFF3D
+
+/* style main block */
+.main
+  @media (max-width: 1024px)
+    padding: 0 20rem
+
+
+.main__mapping
+  padding: 25rem 0 23rem
+  @media (max-width: 540px)
+    padding: 13rem 0 25rem
+.mapping-menu
+  display: flex
+  position: relative
+  width: 500rem
+  z-index: 1
+  @media (max-width: 1024px)
+    width: 100%
+    flex-direction: column
+
+.mapping-nav
+  display: flex
+  @media (max-width: 1024px)
+    position: absolute
+    display: flex
+    flex-direction: column
+    width: 280rem
+    margin: 0 auto
+    padding: 0 18rem
+    left: -100%
+    z-index: 8
+    transition: 0.3s
+
+
+.close-main__mapping
+  position: absolute
+  top: -40rem
+  right: 32rem
+  width: 19rem
+  height: 19rem
+  cursor: pointer
+
+
+.close-main__mapping:before,
+.close-main__mapping:after
+  content: ""
+  position: absolute
+  top: 21rem
+  left: 10rem
+  width: 26rem
+  height: 2rem
+  background: #FFFFFF
+  &:hover
+    background: #B4B4B4
+
+
+.close-main__mapping:before
+  webkit-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+
+.close-main__mapping:after
+  webkit-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mapping-menu__item
+  position: absolute
+  width: 246rem
+  border: 1rem solid #D0D0D0
+  padding: 13rem 0 11rem 17rem
+  background: #FFFFFF
+  box-shadow: 0 0 6rem rgba(0, 0, 0, 0.15)
+  z-index: 9
+  @media (max-width: 1024px)
+    margin: 21rem 0 0 16rem
+    padding: 0
+
+.mapping-menu__item--link
+  width: 100%
+  background: url(../assets/images/arrow.svg) no-repeat
+  background-position: 93% 51%
+  @media (max-width: 1024px)
+    background-position: 90% 51%
+
+.mapping-menu__item a,
+.submenu__item a
+  display: flex
+  font-size: 16rem
+  line-height: 21rem
+  color: #484848
+  @media (max-width: 1024px)
+    padding: 13rem 0 11rem 17rem
+
+.brand
+  left: 278rem
+  z-index: 2
+  @media (max-width: 1024px)
+    left: 0
+    top: 67rem
+
+.submenu
+  display: none
+  margin: 12rem 16rem 0 0
+  border-top: 1rem solid #D0D0D0
+  transition: 0.5s
+  @media (max-width: 1024px)
+    margin: 0 0 10rem 0
+    border: none
+
+.submenu--active
+  display: block
+
+.submenu__item
+  margin: 0 -16rem 0rem -17rem
+  padding: 5rem 0 5rem 17rem
+
+
+.submenu__item:hover
+  background: #E8EEFF
+  transform: scale(1, 1.1)
+
+.submenu__item:hover a
+  font-size: 16rem
+  line-height: 21rem
+  transform: scale(1,0.9)
+
+
+.submenu__item--product
+  padding-top: 5rem
+  margin-top: 8rem
+  @media (max-width: 1024px)
+    padding: 0
+    margin: 0
+
+.submenu__item--brand
+  padding-top: 5rem
+  margin-top: 10rem
+  @media (max-width: 1024px)
+    padding: 0
+    margin: 0
+
+.submenu__item a
+  @media (max-width: 1024px)
+    padding: 5rem 0 5rem 17rem
+
+.mapping-price
+  display: flex
+  align-items: center
+  margin-left: 70rem
+  @media (max-width: 1024px)
+    margin-left: 0
+    display: flex
+    flex-direction: column
+    background: #FFFFFF
+    border-radius: 1rem
+    padding: 0 18rem
+
+.mapping-prise__price
+  display: flex
+  margin-left: 14rem
+  @media (max-width: 1024px)
+    flex-direction: column
+    margin: 155rem 0 0 0
+    width: 100%
+
+
+.mapping-price__title,
+.mapping-price__description
+  font-size: 16rem
+  line-height: 21rem
+  color: #484848
+  @media (max-width: 1024px)
+    display: none
+
+.mapping-price--right
+  margin-left: 9rem
+
+.mapping-price__btn
+  display: none
+  @media (max-width: 1024px)
+    display: block
+    width: 100%
+    padding: 14rem 0 13rem
+    margin-bottom: 19rem
+    outline: none
+    border: none
+    background: #FF3D3D
+    border-radius: 1rem
+    font-weight: bold
+    font-size: 16rem
+    line-height: 21rem
+
+.mapping-price__btn
+  &:hover
+    background: #CE2929
+    transform: scale(1.0)
+
+.price-max
+  margin-left: -1px
+  padding: 13rem 12rem 12rem 0
+  @media (max-width: 1024px)
+    margin-left: 0
+.form-item
+  position: relative
+
+.form-item--big
+  @media (max-width: 1024px)
+    margin: 19rem 0
+
+.price--input
+  width: 120rem
+  padding: 14rem 11rem 11rem 0
+  text-align: right
+  border: 1rem solid #D0D0D0
+  font-weight: bold
+  font-size: 16rem
+  line-height: 21rem
+  color: #484848
+  @media (max-width: 1024px)
+    padding: 13rem 10rem 11rem 20rem
+    width: auto
+
+.input-description
+  font-size: 16rem
+  line-height: 21rem
+  position: absolute
+  left: 11rem
+  top: 14rem
+
+.mapping-nav-mobile
+  display: none
+  justify-content: space-between
+  @media (max-width: 1024px)
+    display: flex
+
+
+.nav-mobile__title
+  font-weight: bold
+  font-size: 16rem
+  line-height: 21rem
+  color: #333333
+
+.nav-mobile__img
+  background: url("../assets/images/hamburger.svg")
+  width: 22rem
+  height: 22rem
+
+.shadow
+  @media (max-width: 1024px)
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0,0,0,0.4)
+    overflow: hidden
+    z-index: 5
+
+.shadow-active
+  @media (max-width: 1024px)
+    left: calc(50% - 157rem)
+    top: calc(50% - 138px)
+
+
+.shadow-body
+  @media (max-width: 1024px)
+    overflow: hidden
+
+/*style product*/
+.main__product
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 29rem
+
+.row
+  display: flex
+
+.col
+  width: 24.9%
+  border: 1rem solid #DEDEDE
+  margin: -1rem -1rem 0 0
+  transition: 0.5s
+  @media (max-width: 1024px)
+    width: 33.1%
+  @media (max-width: 768px)
+    width: 49.8%
+  @media (max-width: 540px)
+    width: 100%
+    margin: -1rem -2rem 0 0
+
+.col:hover
+  background: #E8EEFF
+
+.col--discount
+  width: 49.89%
+  transition: 0.5s
+  @media (max-width: 1024px)
+    width: 66.3%
+  @media (max-width: 768px)
+    width: 99.7%
+  @media (max-width: 540px)
+    width: 100%
+    flex-direction: column
+
+.col--discount:hover
+  background: #FFF1F1
+
+
+.product-item--discount
+  display: flex
+  padding: 0 20rem 0 18rem
+  @media (max-width: 540px)
+    padding: 0 18rem 16rem 18rem
+    flex-direction: column
+
+.product-item--discount__content
+  display: flex
+  flex-direction: column
+  margin-left: 24rem
+  padding-top: 27rem
+  @media (max-width: 1024px)
+    margin-left: 61rem
+    padding-top: 31rem
+  @media (max-width: 768px)
+    margin-left: 75rem
+    padding-top: 27rem
+  @media (max-width: 768px)
+    margin: 0
+    padding: 0
+
+.product-item--discount__img
+  text-align: center
+  padding: 21rem 0 0 3rem
+  @media (max-width: 768px)
+    padding: 21rem 0 0 26rem
+  @media (max-width: 540px)
+    padding: 18rem 0 20rem 0
+
+
+.product-item--discount__title
+  font-size: 20rem
+  font-weight: normal
+  line-height: 26rem
+  color: #333333
+
+.product-item--discount__description
+  font-size: 16rem
+  line-height: 21rem
+  color: #989898
+  padding: 4rem 0 20rem
+  @media (max-width: 768px)
+    padding: 4rem 0 64rem
+  @media (max-width: 768px)
+    padding: 5rem 0 31rem
+
+.product-item--discount__price
+  display: flex
+  flex-direction: column
+  @media (max-width: 540px)
+    padding: 0 18rem
+
+
+.product-item--discount__price--old
+  font-size: 16rem
+  line-height: 21rem
+  text-decoration-line: line-through
+  color: #989898
+  border-bottom: 1rem solid #FFBCBC
+  padding-bottom: 3rem
+  @media (max-width: 768px)
+    padding-bottom: 8rem
+  @media (max-width: 540px)
+    padding-bottom: 5rem
+.product-item--discount__price--new
+  position: relative
+  font-size: 20rem
+  line-height: 26rem
+  color: #FF3D3D
+  padding-top: 4rem
+  @media (max-width: 768px)
+    padding-top: 8rem
+
+.product-item--discount__price--new:after
+  position: absolute
+  content: url("../assets/images/basket-red.svg")
+  top: 5rem
+  right: -1rem
+  @media (max-width: 768px)
+    padding-bottom: 16rem
+
+.product-item
+  display: flex
+  flex-direction: column
+  padding: 0 22rem
+
+.product-item__img
+  text-align: center
+  padding: 21rem 0 0 1rem
+  @media (max-width: 540px)
+    padding: 22rem 37rem 8rem 38rem
+
+.product-item__title
+  font-size: 18rem
+  line-height: 23rem
+  font-weight: normal
+  color: #333333
+  margin: 10rem 0 6rem
+  @media (max-width: 540px)
+    margin: 0 0 5rem
+
+.product-item__description
+  height: 72rem
+  font-size: 14rem
+  line-height: 18rem
+  color: #979797
+  padding-bottom: 21rem
+  border-bottom: 1rem solid #8EACFC
+  @media (max-width: 1024px)
+    padding-bottom: 0
+  @media (max-width: 540px)
+    padding-bottom: 15rem
+
+.product-item__price
+  position: relative
+  font-size: 20rem
+  line-height: 26rem
+  color: #325AC0
+  padding: 4rem 0 13rem 0
+  margin-left: -2rem
+  @media (max-width: 540px)
+    padding: 8rem 0 17rem 0
+
+.product-item__price:after
+  position: absolute
+  content: url(../assets/images/basket-blue.svg)
+  top: 5rem
+  right: -1rem
